@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="src/scss/index.css">
     <link rel="stylesheet" href="src/scss/styles.css">
 
+    <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
     <title>Login</title>
@@ -17,70 +19,76 @@
 <body>
 
 
-
-
-
-
-
-
+                    
     <div class="bg-primary d-flex justify-content-center align-items-center vh-100">
         <div class="container">
             <div class="row justify-content-center p-3">
-
                 <div class="col-md-6 p-4" style="border: 2px solid #7ae3db; border-radius: 5px;">
-
-
-
-
+    
                     <div class="text-center">
                         <h1 class="text-white">Login with Email:</h1>
-                        <p class="text-white">Enter your login information below:</p>
+                        <p class="text-white">Please ensure your email and password are correctly entered before proceeding.</p>
                     </div>
-
-
-                    <form action="/profile" method="POST">
+    
+                    <form action="pages/feedPage.html" method="POST" id="loginForm">
                         <div class="mb-3">
                             <label for="email" class="form-label text-white">Enter your Username or Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email or Username:" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email or Username:" required>
                         </div>
-                    
+    
                         <div class="mb-3">
                             <label for="password" class="form-label text-white">Enter Your Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Your Password:" minlength="8" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Your Password:" minlength="8" required>
                         </div>
-                    
+    
                         <div class="mb-3 d-flex justify-content-center">
-                            <button type="submit" onclick="validateLogin()" class="btn btn-secondary btn-block mb-2 btn-hover-change">Login</button>
-                        </div>
                     
-                        <hr class="" style="border-top: 1px solid #7ae3db;">
-                    
-                        <div class="mb-3 d-flex justify-content-center align-items-center flex-column">
-                            <hr style="width: 90%;">
-                            <div class="mb-2 text-white">or</div>
-                            <hr style="width: 100%;">
-                        </div>
-                    
-                        <div class="text-center-container text-center">
-                            <p class="text-white">(To Homepage)</p>
-                        </div>
-                    
-                        <div class="mb-3 d-flex justify-content-center">
-                            <a href="pages/feedPage.html" class="btn btn-secondary btn-block mb-2 btn-hover-change">Sign Up</a>
+                            <button type="submit" class="btn btn-custom btn-block mb-2">Login</button>
                         </div>
                     </form>
-
-
+    
+                    <div class="mb-3 d-flex justify-content-center align-items-center flex-column">
+                        <hr style="width: 90%;">
+                        <div class="mb-2 text-white">or</div>
+                        <hr style="width: 100%;">
+                    </div>
+    
+                    <div class="text-center-container text-center text-white">
+                        <p>(To Homepage)</p>
+                    </div>
+    
+                    <div class="text-center-container text-center">
+                       
+                        <a href="pages/feedPage.html" class="btn btn-custom btn-block mb-2">Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-                
 
 
 
-
-
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var loginForm = document.getElementById('loginForm');
+                            
+            loginForm.addEventListener('submit', function(event) {
+                 event.preventDefault(); 
+                    var formData = new FormData(loginForm);
+                    fetch('index.html', { 
+                                    method: 'POST',
+                                    body: formData,
+                                })
+                                .then(response => response.text())
+                                .then(data => {
+                                    console.log(data);
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error); 
+                                });
+                            });
+                        });
+                    </script>
 
 
 </body>
