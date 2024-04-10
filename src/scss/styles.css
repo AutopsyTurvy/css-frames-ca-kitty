@@ -12,7 +12,7 @@
 
 .btn-hover-change:hover {
 
-    background-color: #98ff98; 
+    background-color: #7ae3db; 
     color: #000000; 
 }
 
@@ -23,7 +23,7 @@
     margin-bottom: 15px;
     padding: 15px;
     background-color: #202024; 
-    border: 1px solid #98ff98; 
+    border: 1px solid #7ae3db; 
     border-radius: 10px; 
     color: white;
     position: relative; 
@@ -40,3 +40,32 @@
     padding-left: 70px; 
 }
 
+@media (min-width: 768px) { 
+    .container.my-3.ps-md-5 {
+        margin-left: 200px; 
+    }
+}
+
+.profile-img-container {
+    margin-right: 60px; 
+}
+
+.profile-header .profile-img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; 
+}
+.user-stats div {
+    border: 1px solid #fff; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .user-stats h6, .user-stats p {
+        font-size: 0.8rem; 
+    }
+    .user-stats {
+        padding: 5px; 
+    }
+}
