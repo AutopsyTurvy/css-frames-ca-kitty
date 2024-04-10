@@ -47,37 +47,23 @@
 
 
     
-                    <form action="/profile" method="POST">
-                        <div class="mb-3">
-                            <label for="email" class="form-label text-white">Enter your Username or Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email or Username:" required>
+                    <form id="loginForm">
+                        <div>
+                            <label for="email">Enter your Username or Email Address</label>
+                            <input type="email" id="email" placeholder="Email or Username:" required>
                         </div>
                     
-                        <div class="mb-3">
-                            <label for="password" class="form-label text-white">Enter Your Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Your Password:" minlength="8" required>
+                        <div>
+                            <label for="password">Enter Your Password</label>
+                            <input type="password" id="password" placeholder="Your Password:" minlength="8" required>
                         </div>
                     
-                        <div class="mb-3 d-flex justify-content-center">
-                            <button type="submit" onclick="validateLogin(event)" class="btn btn-secondary btn-block mb-2 btn-hover-change">Login</button>
-                        </div>
-                    
-                        <hr class="" style="border-top: 1px solid #98ff98;">
-                    
-                        <div class="mb-3 d-flex justify-content-center align-items-center flex-column">
-                            <hr style="width: 90%;">
-                            <div class="mb-2 text-white">or</div>
-                            <hr style="width: 100%;">
-                        </div>
-                    
-                        <div class="text-center-container text-center">
-                            <p class="text-white">(To Homepage)</p>
-                        </div>
-                    
-                        <div class="mb-3 d-flex justify-content-center">
-                            <a href="pages/feedPage.html" class="btn btn-secondary btn-block mb-2 btn-hover-change">Sign Up</a>
+                        <div>
+                            <button type="submit" class="btn btn-secondary">Login</button>
                         </div>
                     </form>
+                
+                
 
 
                 </div>
@@ -96,22 +82,22 @@
 
 // Small script at the bottom inintially, so i can see if things work 
 
-    function validateLogin(event) {
-        event.preventDefault(); 
-
-        const correctEmail = "user@example.com";
-        const correctPassword = "password123";
-
-        const emailInput = document.getElementById('email').value;
-        const passwordInput = document.getElementById('password').value;
-
-        if (emailInput === correctEmail && passwordInput === correctPassword) {
-            window.location.href = 'pages/feedPage.html'; 
-        } else {
-            alert("Invalid credentials. Please try again.");
-        }
-    }
-</script>
+document.getElementById('loginForm').onsubmit = function(event) {
+                            event.preventDefault(); 
+                
+                            const correctEmail = "user@example.com";
+                            const correctPassword = "password123";
+                
+                            const emailInput = document.getElementById('email').value;
+                            const passwordInput = document.getElementById('password').value;
+                
+                            if (emailInput === correctEmail && passwordInput === correctPassword) {
+                                window.location.href = 'pages/feedPage.html'; 
+                            } else {
+                                alert("Invalid credentials. Please try again.");
+                            }
+                        }
+                    </script>
     
 
 
