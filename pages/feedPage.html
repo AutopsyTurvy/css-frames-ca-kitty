@@ -3,44 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/83488ad6c9.js" crossorigin="anonymous"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/scss/styles.css">
     <link rel="stylesheet" href="../src/scss/index.css">
-    <title>Document</title>
+
+
+ <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <title>Menu/ Feed Page</title>
 </head>
 <body>
 
 
-     
-        <div class="bg-primary row sticky-top bg-dark text-white">
-          <div class="col">
-            <div class="p-2">Sticky Top Row Content</div>
-          </div>
-        </div>
-      
-     
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="p-3 my-3 bg-primary text-white">Add a thought</div>
-            </div>
-          </div>
-      
 
-          <div class="row">
-            <div class="col">
-              <div class="p-3 my-3 bg-secondary text-white">Feed </div>
+
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">Latest Posts 
+                <i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+
+
+                <li class="nav-item"><a class="nav-link" href="./feedPage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="./feedPage.html">Search</a></li>
+                <li class="nav-item"><a class="nav-link" href="./feedPage.html">Explore</a></li>
+              </ul>
             </div>
-          </div>
-      
-          <div class="row">
-            <div class="col">
-              <div class="p-3 my-3 bg-secondary text-white">footer</div>
-            </div>
-          </div>
         </div>
-      </body>
+    </nav>
+
+
+    <div class="bg-primary row sticky-top bg-dark text-white">
+        <div class="col">
+            <div class="p-3"> 
+                <form class="d-flex align-items-center" role="form">
+                    <input class="form-control form-control-sm me-1" type="text" placeholder="What's on your mind?" aria-label="Thoughts" style="font-size: 0.75rem;"> 
+                    <button class="btn btn-outline-success btn-sm" type="submit" style="font-size: 0.75rem;">Share</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+       <div class="container my-3">
+        <div class="feed-container">
     
+            
+            
+            <div class="container my-3">
+                <div class="feed-item">
+                    <img src="/Images/femaleUser.webp" alt="Profile Image" class="profile-img">
+                    <div class="feed-item-content">
+                        <p>These are my thoughts:--</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut hendrerit massa non ante condimentum, et ultricies risus vehicula. 
+                            Duis vitae nisi efficitur, lobortis neque at, blandit nunc.</p>
+                    </div>
+                </div>
+            </div>
 
+
+            <div class="container my-3">
+                <div class="feed-item">
+                    <img src="/Images/maleUser.webp" alt="Profile Image" class="profile-img">
+                    <div class="feed-item-content">
+                        <p>These are my thoughts:--</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut hendrerit massa non ante condimentum, et ultricies risus vehicula. 
+                            Duis vitae nisi efficitur, lobortis neque at, blandit nunc.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container my-3">
+                <div class="feed-item">
+                    <img src="/Images/maleUser.webp" alt="Profile Image" class="profile-img">
+                    <div class="feed-item-content">
+                        <p>These are my thoughts:--</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut hendrerit massa non ante condimentum, et ultricies risus vehicula. 
+                            Duis vitae nisi efficitur, lobortis neque at, blandit nunc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-3">
+                <div class="feed-item">
+                    <img src="/Images/femaleUser.webp" alt="Profile Image" class="profile-img">
+                    <div class="feed-item-content">
+                        <p>These are my thoughts:--</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut hendrerit massa non ante condimentum, et ultricies risus vehicula. 
+                            Duis vitae nisi efficitur, lobortis neque at, blandit nunc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-3">
+                <div class="feed-item">
+                    <img src="/Images/femaleUser.webp" alt="Profile Image" class="profile-img">
+                    <div class="feed-item-content">
+                        <p>These are my thoughts:--</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut hendrerit massa non ante condimentum, et ultricies risus vehicula. 
+                            Duis vitae nisi efficitur, lobortis neque at, blandit nunc.</p>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    </div> 
+
+
+
+
+    <div class="bg-primary p-3 row fixed-bottom text-white">
+        <div class="col d-flex justify-content-around align-items-center">
+            <a href="./feedPage.html" class="text-white">
+                <i class="fa-solid fa-house-chimney"></i>
+            </a>
+            <a href="./feedPage.html" class="text-white">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="./feedPage.html" class="text-white">
+                <i class="fa-solid fa-comment"></i>
+            </a>
+            <a href="./feedPage.html" class="text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+    </div>
 
 
 </body>
